@@ -76,7 +76,7 @@ int CutNum()
 }
 
 выводит третью цифру заданного числа или сообщает, что третьей цифры нет
-int CutThreeNum ()
+int CutThreeNum (int num)
 {
     int num, result;
     Console.WriteLine("введите любое целое число: ");
@@ -87,13 +87,12 @@ int CutThreeNum ()
     return result;
 }
 
-/*принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным*/
-
+/*принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным
 int WeekDays ()
 {
     int num;
     Console.WriteLine("введите цифру дня недели (1-7) ");
-    num = Convert.ToInt32(Console.ReadLine());
+    int num = Convert.ToInt32(Console.ReadLine());
     if (num >= 6)
     {
         return "True"; 
@@ -103,3 +102,48 @@ int WeekDays ()
         return "False";
     }
 }
+*/
+
+/*на вход пятизначное число и проверяет, является ли оно палиндромом* чтобы не спутаться, буду всё расписывать стихийным методом, без упрощения*/
+
+int FindPoliandrom ()
+{
+    int num;
+    Console.WriteLine ("введите любое пятизначное число: ");
+    num = Convert.ToInt32(Console.ReadLine());
+    int num5 = num % 10;
+    int num4 = num % 100;
+    int num2 = num % 10000;
+    int num1 = num % 100000;
+        if (num1 == num5 && num2 == num4)
+        {
+         Console.WriteLine("True");
+        }
+        else
+        {
+          Console.WriteLine("False");
+        }
+}
+
+/* принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве*/
+
+double FindLeght (double xA, double yA, double zA, double xB, double yB, double zB)
+{
+   Convert.ToDouble(x, y, z);
+   return Math.Pow((xA - xB),2) + Math.Pow((yA - yB),2) + Math.Pow((zA - zB),2);
+}
+
+/* принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.*/
+void FindCube(int num)
+{
+    int current = 1;
+    while (current <= num)
+    {
+        Console.Write((current * current * current) + " ");
+        current++;
+    }
+}
+Console.WriteLine("введите число");
+int num = Convert.ToInt32(Console.ReadLine());
+
+FindCube(num)
