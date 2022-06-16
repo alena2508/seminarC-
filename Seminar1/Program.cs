@@ -104,7 +104,7 @@ int WeekDays ()
 }
 */
 
-/*на вход пятизначное число и проверяет, является ли оно палиндромом* чтобы не спутаться, буду всё расписывать стихийным методом, без упрощения*/
+/*на вход пятизначное число и проверяет, является ли оно палиндромом* чтобы не спутаться, буду всё расписывать стихийным методом, без упрощения
 
 int FindPoliandrom ()
 {
@@ -125,7 +125,7 @@ int FindPoliandrom ()
         }
 }
 
-/* принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве*/
+принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве
 
 double FindLeght (double xA, double yA, double zA, double xB, double yB, double zB)
 {
@@ -133,7 +133,7 @@ double FindLeght (double xA, double yA, double zA, double xB, double yB, double 
    return Math.Pow((xA - xB),2) + Math.Pow((yA - yB),2) + Math.Pow((zA - zB),2);
 }
 
-/* принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.*/
+принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 void FindCube(int num)
 {
     int current = 1;
@@ -147,3 +147,26 @@ Console.WriteLine("введите число");
 int num = Convert.ToInt32(Console.ReadLine());
 
 FindCube(num)
+*/
+
+
+/*принимает на вход два числа (A и B) и возводит число A в натуральную степень B.*/
+int Stepen (int A, int B);
+int current = 1; current++;
+while (current <= B);
+{
+Console.WriteLine (A * A);
+}
+
+/*задаёт массив из 8 элементов и выводит их на экран.  не сказано ведь, что программа запрашивает числа, значит рандом...*/
+
+int size = 8;
+int [] array = new int [size];
+for (int i = 0; i < size; i = i +1)
+{
+    array[i] = new Random().Next(0, 999);
+}
+for (int i = 0; i < size; i = i +1)
+{
+    Console.WriteLine (array[i] + " ");
+}
