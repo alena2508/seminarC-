@@ -60,11 +60,7 @@ current = N / 2;
 current ++;
 if(current == 0) Console.WriteLine(" current, "); */
 
-
-
-
 /* ДЗ Семинар 2*/
-
 /* на вход трёхзначное число и на выходе показывает вторую цифру
 int CutNum()
 {
@@ -74,7 +70,6 @@ int CutNum()
     int result = sot % 10;
     return result;
 }
-
 выводит третью цифру заданного числа или сообщает, что третьей цифры нет
 int CutThreeNum (int num)
 {
@@ -86,7 +81,6 @@ int CutThreeNum (int num)
     result = num / 10;
     return result;
 }
-
 /*принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным
 int WeekDays ()
 {
@@ -103,9 +97,7 @@ int WeekDays ()
     }
 }
 */
-
 /*на вход пятизначное число и проверяет, является ли оно палиндромом* чтобы не спутаться, буду всё расписывать стихийным методом, без упрощения
-
 int FindPoliandrom ()
 {
     int num;
@@ -150,7 +142,7 @@ FindCube(num)
 */
 
 
-/*принимает на вход два числа (A и B) и возводит число A в натуральную степень B.*/
+/*принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
 int Stepen (int A, int B);
 int current = 1; current++;
 while (current <= B);
@@ -158,8 +150,8 @@ while (current <= B);
 Console.WriteLine (A * A);
 }
 
-/*задаёт массив из 8 элементов и выводит их на экран.  не сказано ведь, что программа запрашивает числа, значит рандом...*/
-
+задаёт массив из 8 элементов и выводит их на экран.  не сказано ведь, что программа запрашивает числа, значит рандом...*/
+/*
 int size = 8;
 int [] array = new int [size];
 for (int i = 0; i < size; i = i +1)
@@ -169,4 +161,86 @@ for (int i = 0; i < size; i = i +1)
 for (int i = 0; i < size; i = i +1)
 {
     Console.WriteLine (array[i] + " ");
+}
+*/
+
+/*Задайте массив из случайных полож. трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.*/
+int[] CreateRandomArray(int size, int min, int max)
+{
+    int[] newArray = new int[size];
+    for(int i = 0; i < size; i ++);
+    {
+        newArray[i] = new Random().Next(min = 100, max = 1000);
+        Console.Write(newArray[i] + " ");
+    }
+    Console.WriteLine();
+    return newArray;
+}
+int FindCountEvenSum(int[] array, int min, int max)
+{
+    int count = 0;
+    for(int i = 0; i < array.Length; i++)
+    {
+        if(array[i] % 2 == 0) count ++;
+    }
+    return count;
+}
+
+/*Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.*/
+int[] CreateRandomArray(int size, int min, int max)
+{
+    int[] newArray = new int[size];
+    for(int i = 0; i < size; i ++);
+    {
+        newArray[i] = new Random().Next(min, max);
+        Console.Write(newArray[i] + " ");
+    }
+    Console.WriteLine();
+    return newArray;
+}
+int FindSumNOTEven(int[] array, int min, int max, int step)
+{
+    int sum = 0;
+    int step = 2;
+    for(int i = 1; i < array.Length; i + step)
+    {
+        if(array[i] % 2 == 1) sum ++;
+    }
+    return sum;
+}
+
+/*Задайте массив вещественных(дробных, см. Random().NextDouble()) чисел. Найдите разницу между макс и мин ЗНАЧЕНИЯМИ элементов массива*/
+
+double[] CreateRandomDoudleArray(int size)
+{
+    double[] newArray = new double[size];
+    for(int i = 0; i < size; i ++);
+    {
+        newArray[i] = new Random().NextDouble();
+        Console.Write(newArray[i] + " ");
+    }
+    Console.WriteLine();
+    return newArray;
+}
+int FindDiffMaxMin(double[] array, double minNum, double maxNum, double result)
+{
+    double minNum = array[i];
+    double maxNum = array[i];
+
+        for(int i = 0; i < array.Length; i++)
+    {
+        if(array[i] < minNum)
+        {
+            minNum = array[i];
+        }
+         if(array[i] > maxNum)
+        {
+            maxNum = array[i];
+        }
+    }
+    Console.WriteLine(maxNum);
+    Console.WriteLine(minNum);
+
+    double maxNum - double minNum = result;
+    return result;
 }
