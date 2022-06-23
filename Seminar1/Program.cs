@@ -164,7 +164,7 @@ for (int i = 0; i < size; i = i +1)
 }
 */
 
-/*Задайте массив из случайных полож. трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.*/
+/*Задайте массив из случайных полож. трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
 int[] CreateRandomArray(int size, int min, int max)
 {
     int[] newArray = new int[size];
@@ -186,7 +186,7 @@ int FindCountEvenSum(int[] array, int min, int max)
     return count;
 }
 
-/*Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.*/
+/*Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
 int[] CreateRandomArray(int size, int min, int max)
 {
     int[] newArray = new int[size];
@@ -207,9 +207,9 @@ int FindSumNOTEven(int[] array, int min, int max, int step)
         if(array[i] % 2 == 1) sum ++;
     }
     return sum;
-}
+}*/
 
-/*Задайте массив вещественных(дробных, см. Random().NextDouble()) чисел. Найдите разницу между макс и мин ЗНАЧЕНИЯМИ элементов массива*/
+/*Задайте массив вещественных(дробных, см. Random().NextDouble()) чисел. Найдите разницу между макс и мин ЗНАЧЕНИЯМИ элементов массива
 
 double[] CreateRandomDoudleArray(int size)
 {
@@ -243,4 +243,31 @@ int FindDiffMaxMin(double[] array, double minNum, double maxNum, double result)
 
     double maxNum - double minNum = result;
     return result;
+}*/
+
+ДЗ#6
+/*Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь*/
+
+int FindPositivNum(int[] array)
+{
+    int count = 0;
+    for( int i=0; i < array.Length; i++)
+    {
+        if( array[i] > 0) count++;
+    }
+    return count;
+}
+Console.WriteLine("введите несколько любых целых чисел: ");
+int array = Convert.ToInt32(Console.ReadLine());
+
+/*Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.*/
+
+int ArrayCopyStepByStep(int[] array)
+{
+    int SecondArray = 0;
+    for( int i=0; i < array.Length; i++)
+    {
+        if( array[i] > 0) count++;
+    }
+    return count;
 }
