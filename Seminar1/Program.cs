@@ -262,12 +262,14 @@ int array = Convert.ToInt32(Console.ReadLine());
 
 /*Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.*/
 
-int ArrayCopyStepByStep(int[] array)
+int ArrayCopyStepByStep(int[] Firstarray, int[] SecondArray, int size)
 {
-    int SecondArray = 0;
-    for( int i=0; i < array.Length; i++)
+    int[] FirstArray = new int[size];
+    for(int i = 0; i < size; i ++);
+    int[] SecondtArray = new int[size];
+    for(int j = 0; j < size; j ++);
     {
-        if( array[i] > 0) count++;
+      [j] == [i], i++, j++;
     }
-    return count;
+    return SecondtArray;
 }
