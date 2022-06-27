@@ -245,8 +245,7 @@ int FindDiffMaxMin(double[] array, double minNum, double maxNum, double result)
     return result;
 }*/
 
-ДЗ#6
-/*Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь*/
+/*Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь
 
 int FindPositivNum(int[] array)
 {
@@ -261,7 +260,7 @@ Console.WriteLine("введите несколько любых целых чи�
 int array = Convert.ToInt32(Console.ReadLine());
 
 /*Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.*/
-
+/*
 int ArrayCopyStepByStep(int[] Firstarray, int[] SecondArray, int size)
 {
     int[] FirstArray = new int[size];
@@ -269,7 +268,109 @@ int ArrayCopyStepByStep(int[] Firstarray, int[] SecondArray, int size)
     int[] SecondtArray = new int[size];
     for(int j = 0; j < size; j ++);
     {
-      [j] == [i], i++, j++;
-    }
+      [j] == [i]; i++; j++;}
     return SecondtArray;
+    */
+/*27 июня, семинар. задача 1*/
+
+int [,] NewMatrix(int n, int m){
+    int[,] newMatrix = new int[n, m];
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < m; j++)
+        {
+            newMatrix[i, j] = i + j;
+            Console.WriteLine(newMatrix[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+    return newMatrix;
+}
+
+/*задача 2*/
+
+int [,] NewMatrix(int a, int b, int min, int max){
+    int[,] newMatrix = new int[a, b];
+    int temp = 0;
+
+    for(int i = 0; i < a; i++)
+    {
+        for(int j = 0; j < b; j++)
+        {
+            newMatrix[i, j] = newRandom().Next(min, max + 1);
+            Console.WriteLine(newMatrix[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+        for(int i = 0, j = 0; i < a || j < b; i = i + 2, j = j + 2){
+
+        temp = newMatrix[i, j];
+        temp = temp * temp;
+        newMatrix[i,j] = temp;
+        }
+        for(int i = 0; i < a; i++)
+    {
+        for(int j = 0; j < b; j++)
+        {
+            Console.WriteLine(newMatrix[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+    return newMatrix;
+}
+ Console.WriteLine(NewMatrix(5,5,1,9));
+/*..................................................................................................
+
+ДЗ. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами*/
+double [,] NewDoubleMatrix(double n, double m, double min, double max){
+    double[,] newMatrix = new double [n, m];
+    for(double i = 0; i < n; i++)
+    {
+        for(double j = 0; j < m; j++)
+        {
+            newMatrix[i, j] = new Random().NextDouble(min, max + 1);
+            Console.WriteLine(newMatrix[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+    return newMatrix;
+}
+
+/*на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или указание, что такого нет*/
+int [,] NewMatrix(int a, int b)
+{
+    int[,] newMatrix = new int[a, b];
+    for(int i = 0; i < a; i++)
+    {
+        for(int j = 0; j < b; j++)
+        {
+            if
+            {
+            [i] < a && [j] < b;
+            return [i, j];
+            }
+            else
+            {
+            return Console.WriteLine("элемента не существует");
+            }
+        }
+        Console.WriteLine();
+    }
+    return newMatrix;
+}
+
+/*Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце*/
+
+int CreateRandomArray(int a, int b, int min, int max)
+{
+int[,] newMatrix = new int[a,b];
+ for(int i = 0; i < a; i++)
+    {
+        for(int j = 0; j < b; j++)
+        {
+            while j < b
+            ( for(i = 0; i < array.Get.Legth; i++) ) / a;
+        }
+
+    }
 }
