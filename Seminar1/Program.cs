@@ -371,10 +371,9 @@ int[,] newMatrix = new int[a,b];
 }*/
 
 /*Задайте двумерный массив. Напишите программу, которая упорядочит по возрастанию элементы каждой строки двумерного массива/
-попробовала каждую строку отсортировать пузырьковым методом, не уверена, что правильно. но не запускается
+попробовала каждую строку отсортировать пузырьковым методом, не уверена, что правильно. но не запускается*/
 
-int[,] CreateTwoDimArray(int m, int n, int min, int max)
-{
+int[,] CreateTwoDimArray(int m, int n, int min, int max){
     int[,] array = new int[m,n];
 
     for(int i = 0; i < m; i++)
@@ -384,8 +383,7 @@ int[,] CreateTwoDimArray(int m, int n, int min, int max)
     return array;
 }
 
-void ShowArray(int[,] array)
-{
+void ShowArray(int[,] array){
     for(int i = 0; i < array.GetLength(0); i++)
     {
         for(int j = 0; j < array.GetLength(1); j++)
@@ -393,85 +391,27 @@ void ShowArray(int[,] array)
         Console.WriteLine();
     }
 }
-int BubbleSorting(int numbers j, int temp, int rows)
+int[,] BubbleSorting(int[,] array)
 {
-    for(int j = 0; j < rows.GetLength(0); j++)
+    for(int i = 0; i < array.GetLength(0); i++)
     {
-        for(int k = 0; k < rows.GetLength - 1; k++)
+        for(int j = 0; j < array.GetLength(1); j++)
         {
-            if(j [k] > j[k + 1])
+          for(int k = 0; k < array.GetLength(1)-1; k++)
+          {
+            if(array[i,k] < array[i,k + 1])
             {
-                temp = [k];
-                [j] = [j +1];
-                [j + 1] = temp;
-
+                int temp = array[i, k+1];
+                array[i,k+1] = array[i,k];
+                array[i,k] = temp;
             }
         }
     }
-    for(int j = 0; j < rows.GetLength(0); j++){
-       Console.WriteLine([j]) 
-    }
-}*/
-
-/*Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
-используем стихийный метод костылей*/
-int[,] CreateTwoDimArray(int m, int n, int min, int max)
-{
-    int[,] array = new int[m,n];
-
-    for(int i = 0; i < m; i++)
-        for(int j = 0; j < n; j++)
-        array[i,j] = new Random().Next(min, max + 1);
-
-    return array;
+}
+return array;
 }
 
-void ShowArray(int[,] array)
-{
-    for(int i = 0; i < array.GetLength(0); i++)
-    {
-        for(int j = 0; j < array.GetLength(1); j++)
-        Console.Write(array[i,j] + " ");
-        Console.WriteLine();
-    }
-}
-int[,] myArray = CreateTwoDimArray(3,4,1,9);
+int[,] myArray = CreateTwoDimArray(5,8,1,9);
 ShowArray(myArray);
-
-
-int sum, count, result;
-count = 0;
-
-for(int i = 0; i < array.GetLength(0); i++)
-{
-    while(count <= j-1)
-    {
-        sum = 0; count = [j]; j++; 
-        sum = sum + count;
-    }
-}
-
-здесь загвостка, не знаю, как отделить сумму каждой строки.
-min = sum;
-if(sum1 > sum2) min = sum2;
-if(sum2 > sum3) min = sum3;
-result = min
-
-
-Заполните спирально массив 4 на 4. (m,n) /*
-
-i=0,j=0; j < n; j++
-
-i=1,j[n-1]; i < m; i++
-
-i[m-1]; j > 0; j--
-
-i=m-2; i>0; i++
-
-i=1,j=1; j+1
-
-i=2,j=2
-
-i=2,j=1
-
-*/
+Console.WriteLine();
+ShowArray(BubbleSorting(myArray));
