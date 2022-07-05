@@ -370,7 +370,35 @@ int[,] newMatrix = new int[a,b];
     }
 }*/
 
-/*Задайте двумерный массив. Напишите программу, которая упорядочит по возрастанию элементы каждой строки двумерного массива/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ДЗ-8 переделано!:Задайте двумерный массив. Напишите программу, которая упорядочит по возрастанию элементы каждой строки двумерного массива/
 попробовала каждую строку отсортировать пузырьковым методом, не уверена, что правильно. но не запускается*/
 
 int[,] CreateTwoDimArray(int m, int n, int min, int max){
@@ -415,3 +443,99 @@ int[,] myArray = CreateTwoDimArray(5,8,1,9);
 ShowArray(myArray);
 Console.WriteLine();
 ShowArray(BubbleSorting(myArray));
+
+
+/*______________________________________________Семинар_9____________________________________________________________*/
+
+/* найдите все числа от 1 до N
+void ShowNums(int n)
+{
+    if(n != 1)
+    {
+        ShowNums(n - 1);
+    }
+    Console.Write(n + " ");
+}
+Console.Write("введите целое число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+ShowNums(num);
+
+вывести числа от M до N, где M меньше N
+void ShowNums(int n, int m)
+{
+    if(n!=m)
+    {
+        ShowNums(n - 1, m);
+    }
+    Console.Write(n + " ");
+}
+Console.Write("введите целое число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("введите целое число: ");
+int m = Convert.ToInt32(Console.ReadLine());
+
+ShowNums(n, m);
+
+
+/*Программа, на вход принемает число, на выходе: сумма его цифр
+int SumDigit (int num)
+{
+    if (num == 0)
+        return 0;
+    return num%10 + SumDigit(num%10);
+}
+Console.Write("введите число: ");
+
+int num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(SumDigit(num));
+
+число А возвести в степень В
+
+int Degree (int A, int B)
+{
+    if (B!= 0)
+        return A*Degree(A, B-1);
+    else return 1;
+}
+Console.WriteLine("введите число: ");
+int A = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("введите ещё одно число: ");
+int B = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(Degree(A,B));
+*/
+/*___________________________________________________________ДЗ_9___________________________________*/
+
+/*Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N*/
+void ShowSumNums(int n, int m)
+{
+    if(n!=m)
+    {
+        ShowSumNums(n - 1, m);
+    }
+    Console.Write(n + " ");
+    return n + ShowSumNums(n-1);
+}
+Console.Write("введите целое число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("введите целое число: ");
+int m = Convert.ToInt32(Console.ReadLine());
+
+ShowSumNums(n, m);
+
+/*Напишите программу, которая будет принимать на вход число и возвращать кол-во его цифр.*/
+int CountDigit (int num)
+{
+    if (num == 0)
+        return 0;
+    return 1 + CountDigit(num%10);
+}
+Console.Write("введите число: ");
+
+int num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(CountDigit(num));
+
