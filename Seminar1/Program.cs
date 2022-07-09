@@ -610,3 +610,77 @@ Console.WriteLine(" " +  SymbolOfWords(names, a,b));
 Console.WriteLine(names[1].ToLower());
 
 /*_________________________дз__________________________*/
+/*Задайте массив строк. Напишите программу, считает кол-во слов в массиве, начинающихся на гласную букву*/
+
+string[] CreateStringArreay (int size)
+{
+    string[] words = new string [size];
+    for(int i = 0; i < size; i ++)
+    {
+        Console.WriteLine($"Input {i + 1} words: ");
+        words[i] = Console.ReadLine();
+    }
+    return words;
+}
+ 
+void ShowArray(string[] array)
+{
+    for(int i = 0; i < array.Length; i ++)
+        Console.WriteLine(array[i] + " ");
+ 
+    Console.WriteLine();    
+}
+ 
+int SymbolOfWords(string[] array, char a1, char a2, char a3, char a4, char a5, char a6)
+{
+    int count = 0;
+    for(int i = 0; i < array.Length; i ++)
+        if (array[i][0] == a1 || array[i][0] == a2 || array[i][0] == a3 || array[i][0] == a4 || array[i][0] == a5 || array[i][0] == a6)
+            count ++;
+    return count;       
+}
+Console.Write("Input the size of arrays: ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input First Symbol: ");
+char a1 = Convert.ToChar(Console.ReadLine());
+
+Console.Write("Input Second Symbol: ");
+char a2 = Convert.ToChar(Console.ReadLine());
+
+Console.Write("Input thirt Symbol: ");
+char a3 = Convert.ToChar(Console.ReadLine());
+
+Console.Write("Input fourth Symbol: ");
+char a4 = Convert.ToChar(Console.ReadLine());
+
+Console.Write("Input fifth Symbol: ");
+char a5 = Convert.ToChar(Console.ReadLine());
+
+Console.Write("Input sixth Symbol: ");
+char a6 = Convert.ToChar(Console.ReadLine());
+
+string[] names = CreateStringArreay(size);
+Console.WriteLine(" " +  SymbolOfWords(names, a1,a2,a3,a4,a5,a6));
+Console.WriteLine(names[1].ToLower());
+
+/*Задайте массив строк. Напишите программу, которая генерирует массив, объединяя элементы попарно*/
+
+string[] ArrayCombination(string[] firstArray, string[] secondArray)
+{
+    int minsize;
+    if(firstArray.Length > secondArray.Length)
+    {
+        minsize = secondArray.Length;
+        for(int i = 0; i < minsize; i++)
+            firstArray[i] += secondArray[i];
+        return firstArray;
+    }
+    else
+    {
+        minsize = firstArray.Length;
+        for(int i = 0; i < minsize; i++)
+            secondArray[i] += firstArray[i];
+        return secondArray;
+    }
+}
