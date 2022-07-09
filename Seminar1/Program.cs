@@ -370,37 +370,7 @@ int[,] newMatrix = new int[a,b];
     }
 }*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*ДЗ-8 переделано!:Задайте двумерный массив. Напишите программу, которая упорядочит по возрастанию элементы каждой строки двумерного массива/
-попробовала каждую строку отсортировать пузырьковым методом, не уверена, что правильно. но не запускается*/
-
+/*ДЗ-8 переделано!:Задайте двумерный массив. Напишите программу, которая упорядочит по возрастанию элементы каждой строки двумерного массива
 int[,] CreateTwoDimArray(int m, int n, int min, int max){
     int[,] array = new int[m,n];
 
@@ -444,9 +414,7 @@ ShowArray(myArray);
 Console.WriteLine();
 ShowArray(BubbleSorting(myArray));
 
-
-/*______________________________________________Семинар_9____________________________________________________________*/
-
+______________________________________________Семинар_9____________________________________________________________*/
 /* найдите все числа от 1 до N
 void ShowNums(int n)
 {
@@ -509,7 +477,7 @@ Console.WriteLine(Degree(A,B));
 */
 /*___________________________________________________________ДЗ_9___________________________________*/
 
-/*Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N*/
+/*Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N
 void ShowSumNums(int n, int m)
 {
     if(n!=m)
@@ -527,7 +495,7 @@ int m = Convert.ToInt32(Console.ReadLine());
 
 ShowSumNums(n, m);
 
-/*Напишите программу, которая будет принимать на вход число и возвращать кол-во его цифр.*/
+Напишите программу, которая будет принимать на вход число и возвращать кол-во его цифр.
 int CountDigit (int num)
 {
     if (num == 0)
@@ -537,5 +505,108 @@ int CountDigit (int num)
 Console.Write("введите число: ");
 
 int num = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(CountDigit(num));
+Console.WriteLine(CountDigit(num));*/
+/*________________________________Семинар_10_________________________________________________________________*/
 
+string[] names = {"Ivan", "Anna", "Max", "Denis"};
+Console.WriteLine (names[0][1]);
+/*------------------------------------------------------------*/
+
+
+string[] names = {"Ivan", "Anna", "Max", "Denis"}; /*сгенерировали*/
+
+string[] CreateStringArray(int size)
+{
+    string[] words = new string [size];
+    for(int i = 0; i < size; i++)
+    {
+        Console.WriteLine($"Input {i + 1} words: ");
+        words[i] = Console.ReadLine();
+    }
+    return words;
+}
+
+void SecondtArray(string[] array) /*показываем*/
+{
+    for(int i = 0; i < array.Length; i++);
+        Console.WriteLine(array[i] + " ");
+    Console.WriteLine();
+}
+
+
+int NumberOfLongWords(string[] array)
+{
+    int count = 0;
+    for(int i = 0; i < array.Length; i++)
+        if(array[i].Length >= 5)
+            count++;
+    return count;
+}
+
+Console.Write("Input number of names: "); /*запросили размер массива*/
+int size = Convert.ToInt32(Console.ReadLine()); /*заполнили массив*/
+string[] numes = CreateStringArray;
+
+Console.WriteLine("Number of long words is " + NumberOfLongWords(names)); /*вывели его*/
+
+
+/*на вход две строки(два массива), на выход: массив из попарно объединённых исходных элементов*/
+string[] ArrayCombination(string[] array1, string[] array2)
+{
+    int minsize;
+    if(array1.Length > array2.Length)
+    {
+        minsize = array2.Length;
+        for(int i = 0; i < minsize; i++)
+            array1[i] += array2[i];
+        return array1;
+    }
+    else
+    {
+        minsize = array1.Length;
+        for(int i = 0; i < minsize; i++)
+            array2[i] += array1[i];
+        return array2;
+    }
+}
+
+
+/* написать программу, которая считает кол-во слов, начинающихся на y или w*/
+string[] CreateStringArreay (int size)
+{
+    string[] words = new string [size];
+    for(int i = 0; i < size; i ++)
+    {
+        Console.WriteLine($"Input {i + 1} words: ");
+        words[i] = Console.ReadLine();
+    }
+    return words;
+}
+ 
+void ShowArray(string[] array)
+{
+    for(int i = 0; i < array.Length; i ++)
+        Console.WriteLine(array[i] + " ");
+ 
+    Console.WriteLine();    
+}
+ 
+int SymbolOfWords(string[] array, char a, char b)
+{
+    int count = 0;
+    for(int i = 0; i < array.Length; i ++)
+        if (array[i][0] == a || array[i][0] == b)
+            count ++;
+    return count;       
+}
+Console.Write("Input the size of arrays: ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input First Symbol: ");
+char a = Convert.ToChar(Console.ReadLine());
+Console.Write("Input Second Symbol: ");
+char b = Convert.ToChar(Console.ReadLine());
+string[] names = CreateStringArreay(size);
+Console.WriteLine(" " +  SymbolOfWords(names, a,b));
+Console.WriteLine(names[1].ToLower());
+
+/*_________________________дз__________________________*/
